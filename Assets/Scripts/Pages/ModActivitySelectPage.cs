@@ -40,7 +40,7 @@ public class ModActivitySelectPage : Pagination<KeyValuePair<string, string>, UI
                 modNames = modNames.Where((x) => x.Key.ToLowerInvariant().Contains(filter) || x.Value.ToLowerInvariant().Contains(filter));
             }
 
-            return modNames.OrderBy((x) => ProfileManager.ActiveDisableSet.Contains(x.Key)).ThenBy((y) => y.Value.Replace("The ", ""));
+            return modNames.OrderBy((x) => ProfileManager.ActiveDisableSet.Contains(x.Key)).ThenBy((y) => y.Value);
         }
     }
 

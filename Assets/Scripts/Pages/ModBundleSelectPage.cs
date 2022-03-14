@@ -77,7 +77,7 @@ public class ModBundleSelectPage : Pagination<ModSelectorService.ModWrapper, UIE
         }
 
         _modWrappers = FilteredModWrappers.ToArray();
-        System.Array.Sort(_modWrappers, (x, y) => string.Compare(x.ModTitle.Replace("The ", ""), y.ModTitle.Replace("The ", "")));
+        System.Array.Sort(_modWrappers, (x, y) => string.Compare(x.ModTitle, y.ModTitle));
         SetPage(0);
     }
 
@@ -101,7 +101,7 @@ public class ModBundleSelectPage : Pagination<ModSelectorService.ModWrapper, UIE
     private void FilterTextChange(string filterText)
     {
         _modWrappers = FilteredModWrappers.ToArray();
-        System.Array.Sort(_modWrappers, (x, y) => string.Compare(x.ModTitle.Replace("The ", ""), y.ModTitle.Replace("The ", "")));
+        System.Array.Sort(_modWrappers, (x, y) => string.Compare(x.ModTitle.Replace("xxxzzzThe ", ""), y.ModTitle.Replace("xxxzzzThe ", "")));
         SetPage(0);
     }
 }

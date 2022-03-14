@@ -43,7 +43,7 @@ public class ProfileSettingsPage : MonoBehaviour
 
     private void SortModulesNames(KeyValuePair<string, string>[] names)
     {
-        System.Array.Sort(names, (x, y) => string.Compare(x.Value.Replace("The ", ""), y.Value.Replace("The ", "")));
+        System.Array.Sort(names, (x, y) => string.Compare(x.Value, y.Value));
     }
 
     public void EditSolvableModules()
